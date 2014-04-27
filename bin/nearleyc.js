@@ -36,7 +36,7 @@ var input = opts.file ? fs.createReadStream(opts.file) : process.stdin;
 var output = opts.out ? fs.createWriteStream(opts.out) : process.stdout;
 
 var language = require('../lib/nearley-language.js');
-var parser = new nearley.Parser(language.rules, language.start);
+var parser = new nearley(language.rules, language.start);
 
 var generate = require('../lib/generate.js');
 
